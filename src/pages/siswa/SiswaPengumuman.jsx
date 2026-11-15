@@ -63,7 +63,7 @@ export default function SiswaPengumuman() {
   if (isLoading) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-slate-50 font-sans">
-        <div className="animate-spin w-10 h-10 border-4 border-blue-600 border-t-transparent rounded-full mb-4"></div>
+        <div className="animate-spin w-10 h-10 border-4 border-blue-600 border-t-transparent mb-4"></div>
         <p className="text-slate-500 font-bold">Memuat data kartu ujian...</p>
       </div>
     );
@@ -83,11 +83,11 @@ export default function SiswaPengumuman() {
         </div>
 
         {cardData ? (
-          <div className="bg-white border border-slate-200 rounded-3xl p-8 shadow-xl shadow-slate-200/50 relative overflow-hidden">
+          <div className="bg-white border border-slate-200 p-8 shadow-xl shadow-slate-200/50 relative overflow-hidden">
             {/* Dekorasi Latar */}
 
             <div className="relative z-10">
-              <div className="inline-block bg-green-100 text-green-700 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
+              <div className="inline-block bg-green-100 text-green-700 px-4 py-1.5 text-xs font-bold uppercase tracking-wider mb-6">
                 Berkas Diverifikasi
               </div>
               
@@ -96,7 +96,7 @@ export default function SiswaPengumuman() {
               <div className="space-y-6 mb-10">
                 {/* NOMOR PENDAFTARAN */}
                 <div className="flex items-center gap-4 border-b border-slate-100 pb-4">
-                  <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-xl shrink-0"><FaIdBadge /></div>
+                  <div className="w-12 h-12 bg-blue-50 text-blue-600 flex items-center justify-center text-xl shrink-0"><FaIdBadge /></div>
                   <div>
                     <p className="text-xs font-bold text-slate-500 uppercase tracking-wide">Nomor Pendaftaran</p>
                     <p className="text-lg font-black text-slate-900">{cardData.no_daftar || '-'}</p>
@@ -105,7 +105,7 @@ export default function SiswaPengumuman() {
 
                 {/* TANGGAL UJIAN */}
                 <div className="flex items-center gap-4 border-b border-slate-100 pb-4">
-                  <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-xl shrink-0"><FaCalendarAlt /></div>
+                  <div className="w-12 h-12 bg-blue-50 text-blue-600 flex items-center justify-center text-xl shrink-0"><FaCalendarAlt /></div>
                   <div>
                     <p className="text-xs font-bold text-slate-500 uppercase tracking-wide">Tanggal & Waktu Ujian</p>
                     <p className="text-lg font-black text-slate-900">
@@ -116,7 +116,7 @@ export default function SiswaPengumuman() {
 
                 {/* LOKASI UJIAN */}
                 <div className="flex items-center gap-4 border-b border-slate-100 pb-4">
-                  <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-xl shrink-0"><FaMapMarkerAlt /></div>
+                  <div className="w-12 h-12 bg-blue-50 text-blue-600 flex items-center justify-center text-xl shrink-0"><FaMapMarkerAlt /></div>
                   <div>
                     <p className="text-xs font-bold text-slate-500 uppercase tracking-wide">Lokasi Ujian (Offline)</p>
                     <p className="text-lg font-black text-slate-900">{cardData.lokasi_test || '-'}</p>
@@ -126,7 +126,7 @@ export default function SiswaPengumuman() {
 
               <button 
                 onClick={handleDownloadPDF}
-                className="w-full sm:w-auto flex items-center justify-center gap-3 bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 active:scale-95"
+                className="w-full sm:w-auto flex items-center justify-center gap-3 bg-blue-600 text-white px-8 py-4 font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 active:scale-95"
               >
                 <FaDownload /> Unduh PDF Kartu Ujian
               </button>
@@ -136,8 +136,8 @@ export default function SiswaPengumuman() {
             </div>
           </div>
         ) : (
-          <div className="bg-white border border-slate-200 rounded-3xl p-12 text-center shadow-sm">
-            <div className="w-20 h-20 bg-slate-100 text-slate-400 rounded-full flex items-center justify-center text-3xl mx-auto mb-6">
+          <div className="bg-white border border-slate-200 p-12 text-center shadow-sm">
+            <div className="w-20 h-20 bg-slate-100 text-slate-400 flex items-center justify-center text-3xl mx-auto mb-6">
               <FaLock />
             </div>
             <h3 className="text-xl font-black text-slate-900 mb-2">Kartu Ujian Belum Tersedia</h3>

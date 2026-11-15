@@ -135,7 +135,7 @@ export default function SiswaDaftar() {
             {isRevisi ? 'Revisi Dokumen Pendaftaran' : 'Lengkapi Biodata & Berkas'}
           </h1>
           {isRevisi && (
-             <div className="mt-4 bg-amber-100 text-amber-800 p-4 rounded-xl text-sm font-medium border border-amber-200 flex gap-3 items-center">
+             <div className="mt-4 bg-amber-100 text-amber-800 p-4 text-sm font-medium border border-amber-200 flex gap-3 items-center">
                 <FaExclamationCircle className="text-xl shrink-0"/>
                 <p>Silakan unggah dokumen pengganti untuk berkas yang ditolak oleh panitia di bawah ini.</p>
              </div>
@@ -148,38 +148,38 @@ export default function SiswaDaftar() {
           {/* SECTION 1: HANYA MUNCUL JIKA DAFTAR BARU (BUKAN REVISI) */}
           {/* ========================================================= */}
           {!isRevisi && (
-            <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
+            <div className="bg-white border border-slate-200 p-8 shadow-sm">
               <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-3 border-b border-slate-100 pb-4">
                 <FaUserGraduate className="text-blue-600" /> Data Pribadi & Akademik
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="md:col-span-2">
                   <label className="block text-sm font-bold text-slate-700 mb-2">Nama Lengkap</label>
-                  <input type="text" name="nama" required value={formData.nama} onChange={handleTextChange} className="w-full border-slate-200 rounded-xl focus:ring-blue-500 py-3 px-4 border" />
+                  <input type="text" name="nama" required value={formData.nama} onChange={handleTextChange} className="w-full border-slate-200  focus:ring-blue-500 py-3 px-4 border" />
                 </div>
                 <div>
                   <label className="block text-sm font-bold text-slate-700 mb-2">NISN</label>
-                  <input type="number" name="nisn" required value={formData.nisn} onChange={handleTextChange} className="w-full border-slate-200 rounded-xl focus:ring-blue-500 py-3 px-4 border" />
+                  <input type="number" name="nisn" required value={formData.nisn} onChange={handleTextChange} className="w-full border-slate-200 focus:ring-blue-500 py-3 px-4 border" />
                 </div>
                 <div>
                   <label className="block text-sm font-bold text-slate-700 mb-2">No. HP / WhatsApp</label>
-                  <input type="tel" name="no_hp" required value={formData.no_hp} onChange={handleTextChange} className="w-full border-slate-200 rounded-xl focus:ring-blue-500 py-3 px-4 border" />
+                  <input type="tel" name="no_hp" required value={formData.no_hp} onChange={handleTextChange} className="w-full border-slate-200 focus:ring-blue-500 py-3 px-4 border" />
                 </div>
                 <div>
                   <label className="block text-sm font-bold text-slate-700 mb-2">Asal Sekolah</label>
-                  <input type="text" name="asal_sekolah" required value={formData.asal_sekolah} onChange={handleTextChange} className="w-full border-slate-200 rounded-xl focus:ring-blue-500 py-3 px-4 border" />
+                  <input type="text" name="asal_sekolah" required value={formData.asal_sekolah} onChange={handleTextChange} className="w-full border-slate-200 focus:ring-blue-500 py-3 px-4 border" />
                 </div>
                 <div>
                   <label className="block text-sm font-bold text-slate-700 mb-2">Akreditasi</label>
-                  <input type="text" name="akreditasi_sekolah" required value={formData.akreditasi_sekolah} onChange={handleTextChange} className="w-full border-slate-200 rounded-xl focus:ring-blue-500 py-3 px-4 border" />
+                  <input type="text" name="akreditasi_sekolah" required value={formData.akreditasi_sekolah} onChange={handleTextChange} className="w-full border-slate-200 focus:ring-blue-500 py-3 px-4 border" />
                 </div>
                 <div className="md:col-span-2">
                   <label className="block text-sm font-bold text-slate-700 mb-2">Alamat Lengkap</label>
-                  <textarea name="alamat" required value={formData.alamat} onChange={handleTextChange} className="w-full border-slate-200 rounded-xl focus:ring-blue-500 py-3 px-4 border" rows="2"></textarea>
+                  <textarea name="alamat" required value={formData.alamat} onChange={handleTextChange} className="w-full border-slate-200 focus:ring-blue-500 py-3 px-4 border" rows="2"></textarea>
                 </div>
                 <div className="md:col-span-2">
                   <label className="block text-sm font-bold text-slate-700 mb-2">Pilihan Jurusan</label>
-                  <select name="jurusan" required value={formData.jurusan} onChange={handleTextChange} className="w-full border-slate-200 rounded-xl focus:ring-blue-500 py-3 px-4 border bg-white">
+                  <select name="jurusan" required value={formData.jurusan} onChange={handleTextChange} className="w-full border-slate-200 focus:ring-blue-500 py-3 px-4 border bg-white">
                     <option value="" disabled>-- Pilih Jurusan --</option>
                     <option value="TKJ">Teknik Komputer & Jaringan (TKJ)</option>
                     <option value="ATP">Agribisnis Tanaman Perkebunan (ATP)</option>
@@ -194,7 +194,7 @@ export default function SiswaDaftar() {
           {/* ========================================================= */}
           {/* SECTION 2: UPLOAD BERKAS (FILTER OTOMATIS)                */}
           {/* ========================================================= */}
-          <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
+          <div className="bg-white border border-slate-200 p-8 shadow-sm">
             <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-3 border-b border-slate-100 pb-4">
               <FaUpload className="text-blue-600" /> {isRevisi ? 'Unggah Ulang Berkas Revisi' : 'Unggah Berkas Persyaratan'}
             </h3>
@@ -210,7 +210,7 @@ export default function SiswaDaftar() {
                   const isRequiredInput = isRevisi ? true : item.req;
 
                   return (
-                    <div key={item.id} className={`p-4 rounded-xl transition-all border ${isRevisi ? 'border-red-300 bg-red-50' : 'border-slate-200 bg-slate-50 hover:border-blue-300'}`}>
+                    <div key={item.id} className={`p-4 transition-all border ${isRevisi ? 'border-red-300 bg-red-50' : 'border-slate-200 bg-slate-50 hover:border-blue-300'}`}>
                       <div className="flex justify-between items-start mb-2">
                         <label className={`block text-xs font-bold uppercase tracking-tight ${isRevisi ? 'text-red-700' : 'text-slate-700'}`}>
                           {item.label} {isRequiredInput && <span className="text-red-500">*</span>}
@@ -227,7 +227,7 @@ export default function SiswaDaftar() {
                         required={isRequiredInput} 
                         onChange={handleFileChange} 
                         accept=".jpg,.jpeg,.png,.pdf"
-                        className={`block w-full text-xs text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-[10px] file:font-bold ${isRevisi ? 'file:bg-red-600 file:text-white' : 'file:bg-slate-200 file:text-slate-700'} cursor-pointer`} 
+                        className={`block w-full text-xs text-slate-500 file:mr-4 file:py-2 file:px-4 file:border-0 file:text-[10px] file:font-bold ${isRevisi ? 'file:bg-red-600 file:text-white' : 'file:bg-slate-200 file:text-slate-700'} cursor-pointer`} 
                       />
                     </div>
                   );
@@ -235,12 +235,12 @@ export default function SiswaDaftar() {
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-blue-50 p-6 rounded-2xl border border-blue-100">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-blue-50 p-6 border border-blue-100">
             <div className="flex items-center gap-3 text-blue-800">
               <FaInfoCircle className="text-xl shrink-0" />
               <p className="text-xs leading-relaxed">Pastikan file yang diunggah dapat terbaca jelas.</p>
             </div>
-            <button type="submit" className="w-full md:w-auto flex items-center justify-center gap-3 bg-blue-600 text-white px-10 py-4 rounded-xl font-bold hover:bg-blue-700 shadow-lg shadow-blue-200 active:scale-95">
+            <button type="submit" className="w-full md:w-auto flex items-center justify-center gap-3 bg-blue-600 text-white px-10 py-4 font-bold hover:bg-blue-700 shadow-lg shadow-blue-200 active:scale-95">
               <FaSave /> {isRevisi ? 'Kirim Revisi Berkas' : 'Simpan Pendaftaran'}
             </button>
           </div>

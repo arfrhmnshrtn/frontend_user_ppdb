@@ -12,7 +12,7 @@ export default function Footer() {
           {/* Brand & Logo Section */}
           <div className="md:col-span-5 space-y-6">
             <div className="flex items-center gap-4">
-              <div className="bg-white p-1.5 rounded-xl shadow-lg">
+              <div className="bg-white p-1.5 shadow-lg">
                 <img 
                   src={logoSekolah} 
                   alt="Logo SMKN 1" 
@@ -28,9 +28,9 @@ export default function Footer() {
               Mewujudkan tenaga kerja tingkat menengah yang profesional, berakhlak mulia, dan siap bersaing di era industri global.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all"><FaFacebook /></a>
-              <a href="#" className="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-pink-600 hover:text-white transition-all"><FaInstagram /></a>
-              <a href="#" className="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-red-600 hover:text-white transition-all"><FaYoutube /></a>
+              <a href="#" className="w-10 h-10 bg-slate-800 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all"><FaFacebook /></a>
+              <a href="#" className="w-10 h-10 bg-slate-800 flex items-center justify-center hover:bg-pink-600 hover:text-white transition-all"><FaInstagram /></a>
+              <a href="#" className="w-10 h-10 bg-slate-800 flex items-center justify-center hover:bg-red-600 hover:text-white transition-all"><FaYoutube /></a>
             </div>
           </div>
 

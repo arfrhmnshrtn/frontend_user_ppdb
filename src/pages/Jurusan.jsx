@@ -58,14 +58,14 @@ export default function Jurusan() {
             
             {daftarJurusan.map((jurusan, i) => (
               <ScrollReveal key={jurusan.id} direction="up" delay={i * 0.15}>
-                <div className="group border border-slate-200 rounded-3xl p-8 sm:p-10 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-300 bg-white flex flex-col hover:-translate-y-2">
+                <div className="group border border-slate-200 p-8 sm:p-10 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-300 bg-white flex flex-col hover:-translate-y-2">
                   
                   {/* Header Card */}
                   <div className="flex items-start justify-between mb-8">
-                    <div className="w-16 h-16 rounded-2xl bg-slate-50 text-slate-700 flex items-center justify-center text-3xl border border-slate-100 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                    <div className="w-16 h-16 bg-slate-50 text-slate-700 flex items-center justify-center text-3xl border border-slate-100 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
                       {jurusan.ikon}
                     </div>
-                    <span className="text-xs font-black text-slate-400 bg-slate-50 px-4 py-1.5 rounded-full tracking-widest uppercase group-hover:bg-blue-50 group-hover:text-blue-600 transition-colors">
+                    <span className="text-xs font-black text-slate-400 bg-slate-50 px-4 py-1.5 tracking-widest uppercase group-hover:bg-blue-50 group-hover:text-blue-600 transition-colors">
                       {jurusan.singkatan}
                     </span>
                   </div>
@@ -86,7 +86,7 @@ export default function Jurusan() {
                     <ul className="space-y-4">
                       {jurusan.karir.map((karir, idx) => (
                         <li key={idx} className="flex items-center text-sm text-slate-700 font-bold">
-                          <div className="w-6 h-6 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center mr-3 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                          <div className="w-6 h-6 bg-blue-50 text-blue-600 flex items-center justify-center mr-3 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                             <FaCheck size={10} />
                           </div>
                           {karir}
@@ -111,7 +111,7 @@ export default function Jurusan() {
               </p>
               <Link 
                 to="/register" 
-                className="inline-block bg-blue-600 text-white px-10 py-4 rounded-xl font-bold hover:bg-blue-700 transition-all hover:shadow-xl hover:shadow-blue-600/20 hover:-translate-y-1"
+                className="inline-block bg-blue-600 text-white px-10 py-4 font-bold hover:bg-blue-700 transition-all hover:shadow-xl hover:shadow-blue-600/20 hover:-translate-y-1"
               >
                 Buat Akun Pendaftaran
               </Link>

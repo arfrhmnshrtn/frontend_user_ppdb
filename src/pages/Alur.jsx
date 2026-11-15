@@ -72,13 +72,13 @@ export default function Alur() {
             <div className="space-y-6">
               <ScrollReveal direction="right" delay={0.2}>
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-blue-600/30">
+                  <div className="w-12 h-12 bg-blue-600 flex items-center justify-center text-white shadow-lg shadow-blue-600/30">
                     <FaCalendarAlt size={20} />
                   </div>
                   <h3 className="text-2xl font-black text-slate-900 tracking-tight">Jadwal Pelaksanaan</h3>
                 </div>
                 
-                <div className="bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-xl shadow-slate-200/50">
+                <div className="bg-white border border-slate-200 overflow-hidden shadow-xl shadow-slate-200/50">
                   <table className="w-full text-left border-collapse">
                     <thead>
                       <tr className="bg-slate-100/50 border-b border-slate-200">
@@ -108,16 +108,16 @@ export default function Alur() {
             <div className="space-y-6">
               <ScrollReveal direction="left" delay={0.4}>
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-amber-500 rounded-xl flex items-center justify-center text-white shadow-lg shadow-amber-500/30">
+                  <div className="w-12 h-12 bg-amber-500 flex items-center justify-center text-white shadow-lg shadow-amber-500/30">
                     <FaFileSignature size={20} />
                   </div>
                   <h3 className="text-2xl font-black text-slate-900 tracking-tight">Persyaratan Berkas</h3>
                 </div>
 
-                <div className="bg-white border border-slate-200 rounded-3xl p-6 md:p-8 shadow-xl shadow-slate-200/50">
+                <div className="bg-white border border-slate-200 p-6 md:p-8 shadow-xl shadow-slate-200/50">
                   <div className="grid grid-cols-1 gap-2">
                     {persyaratan.map((item, i) => (
-                      <div key={i} className="flex items-start gap-4 p-3 rounded-xl hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-100 group">
+                      <div key={i} className="flex items-start gap-4 p-3 hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-100 group">
                         <FaRegCheckCircle className="text-blue-500 mt-0.5 shrink-0 text-lg group-hover:scale-110 transition-transform" />
                         <span className="text-sm md:text-base font-semibold text-slate-700 leading-relaxed group-hover:text-slate-900">{item}</span>
                       </div>
@@ -134,7 +134,7 @@ export default function Alur() {
         <ScrollReveal direction="up" delay={0.5}>
           <div className="bg-slate-900 py-16 text-center relative z-10 -mb-1 select-none">
             <h3 className="text-white font-black text-2xl md:text-3xl mb-6 tracking-tight">Siap Bergabung Bersama Kami?</h3>
-            <Link to="/register" className="inline-block bg-blue-600 text-white px-10 py-4 rounded-xl font-bold hover:bg-blue-500 transition-all duration-300 shadow-xl shadow-blue-600/20 hover:-translate-y-1">
+            <Link to="/register" className="inline-block bg-blue-600 text-white px-10 py-4 font-bold hover:bg-blue-500 transition-all duration-300 shadow-xl shadow-blue-600/20 hover:-translate-y-1">
               Daftar Sekarang
             </Link>
           </div>

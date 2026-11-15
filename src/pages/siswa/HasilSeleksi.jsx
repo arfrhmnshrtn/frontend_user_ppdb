@@ -128,7 +128,7 @@ export default function HasilSeleksi() {
   if (loading) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-slate-50 font-sans">
-        <div className="animate-spin w-10 h-10 border-4 border-blue-600 border-t-transparent rounded-full mb-4"></div>
+        <div className="animate-spin w-10 h-10 border-4 border-blue-600 border-t-transparent mb-4"></div>
         <p className="text-slate-500 font-bold">Sinkronisasi waktu pengumuman...</p>
       </div>
     );
@@ -149,8 +149,8 @@ export default function HasilSeleksi() {
 
         {/* LAYOUT 1: WAKTU BELUM HABIS (HITUNG MUNDUR) */}
         {statusLulus === 'LOCKED' && !countdown.isTimeUp && (
-          <div className="bg-white border border-slate-200 rounded-3xl p-8 md:p-12 text-center shadow-xl shadow-slate-200/40">
-            <div className="w-20 h-20 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center text-3xl mx-auto mb-6 border-4 border-blue-100 animate-bounce">
+          <div className="bg-white border border-slate-200 p-8 md:p-12 text-center shadow-xl shadow-slate-200/40">
+            <div className="w-20 h-20 bg-blue-50 text-blue-600 flex items-center justify-center text-3xl mx-auto mb-6 border-4 border-blue-100 animate-bounce">
               <FaClock />
             </div>
             <h3 className="text-2xl font-black text-slate-900 mb-2 tracking-tight">Hitung Mundur Pengumuman Hasil</h3>
@@ -159,19 +159,19 @@ export default function HasilSeleksi() {
             </p>
 
             <div className="grid grid-cols-4 gap-3 md:gap-4 max-w-sm mx-auto mb-4">
-              <div className="bg-slate-900 text-white rounded-2xl p-3 md:p-4 shadow-md">
+              <div className="bg-slate-900 text-white p-3 md:p-4 shadow-md">
                 <span className="block text-2xl md:text-3xl font-black tracking-tight">{String(countdown.days).padStart(2, '0')}</span>
                 <span className="text-[10px] uppercase text-slate-400 font-bold tracking-wider mt-1 block">Hari</span>
               </div>
-              <div className="bg-slate-900 text-white rounded-2xl p-3 md:p-4 shadow-md">
+              <div className="bg-slate-900 text-white p-3 md:p-4 shadow-md">
                 <span className="block text-2xl md:text-3xl font-black tracking-tight">{String(countdown.hours).padStart(2, '0')}</span>
                 <span className="text-[10px] uppercase text-slate-400 font-bold tracking-wider mt-1 block">Jam</span>
               </div>
-              <div className="bg-slate-900 text-white rounded-2xl p-3 md:p-4 shadow-md">
+              <div className="bg-slate-900 text-white p-3 md:p-4 shadow-md">
                 <span className="block text-2xl md:text-3xl font-black tracking-tight">{String(countdown.minutes).padStart(2, '0')}</span>
                 <span className="text-[10px] uppercase text-slate-400 font-bold tracking-wider mt-1 block">Menit</span>
               </div>
-              <div className="bg-red-600 text-white rounded-2xl p-3 md:p-4 shadow-md animate-pulse">
+              <div className="bg-red-600 text-white p-3 md:p-4 shadow-md animate-pulse">
                 <span className="block text-2xl md:text-3xl font-black tracking-tight">{String(countdown.seconds).padStart(2, '0')}</span>
                 <span className="text-[10px] uppercase text-red-200 font-bold tracking-wider mt-1 block">Detik</span>
               </div>
@@ -182,10 +182,10 @@ export default function HasilSeleksi() {
 
         {/* LAYOUT 2: WAKTU HABIS TAPI DATA BELUM DIKASIH ARIEF (SEDANG AUTO-REFRESH) */}
         {statusLulus === 'LOCKED' && countdown.isTimeUp && (
-          <div className="bg-white border border-slate-200 rounded-3xl p-12 text-center shadow-sm">
+          <div className="bg-white border border-slate-200 p-12 text-center shadow-sm">
             <div className="relative w-20 h-20 mx-auto mb-6">
-              <div className="absolute inset-0 bg-amber-100 rounded-full animate-ping opacity-75"></div>
-              <div className="relative w-20 h-20 bg-amber-50 text-amber-500 rounded-full flex items-center justify-center text-3xl border-4 border-amber-100">
+              <div className="absolute inset-0 bg-amber-100 animate-ping opacity-75"></div>
+              <div className="relative w-20 h-20 bg-amber-50 text-amber-500 flex items-center justify-center text-3xl border-4 border-amber-100">
                 <FaSyncAlt className="animate-spin" />
               </div>
             </div>
@@ -199,9 +199,9 @@ export default function HasilSeleksi() {
 
         {/* LAYOUT 3: HASIL LULUS (PASSED) */}
         {statusLulus === 'LULUS' && (
-          <div className="bg-white border border-green-200 rounded-3xl p-10 text-center shadow-2xl shadow-green-100/50 relative overflow-hidden animate-fade-in-up">
+          <div className="bg-white border border-green-200 p-10 text-center shadow-2xl shadow-green-100/50 relative overflow-hidden animate-fade-in-up">
             <div className="absolute top-0 left-0 w-full h-2 bg-green-500"></div>
-            <div className="w-28 h-28 bg-green-50 text-green-600 rounded-full flex items-center justify-center text-6xl mx-auto mb-6 border-4 border-green-100">
+            <div className="w-28 h-28 bg-green-50 text-green-600 flex items-center justify-center text-6xl mx-auto mb-6 border-4 border-green-100">
               <FaTrophy />
             </div>
             <h2 className="text-3xl font-black text-slate-900 mb-4 tracking-tight">SELAMAT! ANDA LULUS</h2>
@@ -209,7 +209,7 @@ export default function HasilSeleksi() {
               Selamat, Anda telah memenuhi kriteria seleksi dan resmi diterima sebagai calon siswa baru.
             </p>
             {pesanPanitia && (
-              <div className="bg-slate-50 border border-slate-200 p-4 rounded-xl text-sm font-bold text-slate-700">
+              <div className="bg-slate-50 border border-slate-200 p-4 text-sm font-bold text-slate-700">
                 Catatan Panitia: {pesanPanitia}
               </div>
             )}
@@ -218,9 +218,9 @@ export default function HasilSeleksi() {
 
         {/* LAYOUT 4: HASIL TIDAK LULUS (FAILED) */}
         {statusLulus === 'TIDAK_LULUS' && (
-          <div className="bg-white border border-red-200 rounded-3xl p-10 text-center shadow-xl shadow-red-100/50 relative overflow-hidden animate-fade-in-up">
+          <div className="bg-white border border-red-200 p-10 text-center shadow-xl shadow-red-100/50 relative overflow-hidden animate-fade-in-up">
             <div className="absolute top-0 left-0 w-full h-2 bg-red-500"></div>
-            <div className="w-24 h-24 bg-red-50 text-red-500 rounded-full flex items-center justify-center text-6xl mx-auto mb-6">
+            <div className="w-24 h-24 bg-red-50 text-red-500 flex items-center justify-center text-6xl mx-auto mb-6">
               <FaTimesCircle />
             </div>
             <h2 className="text-3xl font-black text-slate-900 mb-4 tracking-tight">MOHON MAAF</h2>
@@ -228,7 +228,7 @@ export default function HasilSeleksi() {
               Berdasarkan hasil tes seleksi, Anda dinyatakan <b>TIDAK LULUS</b>. Jangan patah semangat dan teruslah berjuang!
             </p>
             {pesanPanitia && (
-              <div className="bg-red-50 border border-red-100 p-4 rounded-xl text-sm font-bold text-red-800">
+              <div className="bg-red-50 border border-red-100 p-4 text-sm font-bold text-red-800">
                 Catatan Panitia: {pesanPanitia}
               </div>
             )}
