@@ -231,7 +231,7 @@ export default function DashboardSiswa() {
 
       default:
         return (
-          <div className="bg-blue-50 border border-blue-200 p-10 text-center shadow-lg shadow-blue-100 relative overflow-hidden">
+          <div className="bg-blue-50 border border-blue-200 p-10 text-center shadow-blue-100 relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-1 bg-blue-500 animate-pulse"></div>
             <div className="w-24 h-24 bg-white text-blue-600 flex items-center justify-center text-5xl mx-auto mb-6 shadow-sm">
               <FaClock />
@@ -255,7 +255,7 @@ export default function DashboardSiswa() {
             <h2 className="text-xs font-bold tracking-[0.3em] text-blue-600 uppercase mb-2">Portal Calon Siswa SPMB</h2>
             <h1 className="text-4xl font-black text-slate-900 tracking-tight leading-none">Halo, {userData.name}!</h1>
           </div>
-          <button onClick={handleLogout} className="flex items-center gap-2 text-sm text-slate-500 hover:text-red-600 font-bold transition-all px-4 py-2 hover:bg-red-50">
+          <button onClick={handleLogout} className="flex items-center gap-2 text-sm text-red-500 hover:text-red-600 font-bold transition-all px-4 py-2 hover:bg-red-50">
             <FaSignOutAlt /> Keluar Sistem
           </button>
         </div>

@@ -8,6 +8,8 @@ export default function HasilSeleksi() {
   const [loading, setLoading] = useState(true);
   const [statusLulus, setStatusLulus] = useState('LOCKED'); 
   const [pesanPanitia, setPesanPanitia] = useState('');
+  const [jurusanDiterima, setJurusanDiterima] = useState(null);
+  const [jalurPenerimaan, setJalurPenerimaan] = useState(null);
   
   const [targetTime, setTargetTime] = useState(null);
   const [countdown, setCountdown] = useState({
@@ -41,6 +43,8 @@ export default function HasilSeleksi() {
       }
       
       setPesanPanitia(data.catatan || data.message || '');
+      setJurusanDiterima(data.jurusan_diterima || null);
+      setJalurPenerimaan(data.jalur_penerimaan || null);
       setCountdown(prev => ({ ...prev, isTimeUp: true })); 
     }
   };
@@ -208,6 +212,19 @@ export default function HasilSeleksi() {
             <p className="text-lg text-slate-600 font-medium mb-6 max-w-lg mx-auto leading-relaxed">
               Selamat, Anda telah memenuhi kriteria seleksi dan resmi diterima sebagai calon siswa baru.
             </p>
+            {jurusanDiterima && (
+              <div className="mb-6 inline-block bg-green-50 border border-green-200 px-6 py-4 text-center">
+                <p className="text-xs font-bold uppercase tracking-wider text-green-700 mb-1">
+                  Diterima pada Kompetensi Keahlian
+                </p>
+                <p className="text-2xl font-black text-green-800">{jurusanDiterima}</p>
+                {jalurPenerimaan && (
+                  <p className="text-xs font-semibold text-green-700 mt-1">
+                    Melalui Jalur: {jalurPenerimaan === 'PILIHAN_1' ? 'Pilihan 1' : 'Pilihan 2'}
+                  </p>
+                )}
+              </div>
+            )}
             {pesanPanitia && (
               <div className="bg-slate-50 border border-slate-200 p-4 text-sm font-bold text-slate-700">
                 Catatan Panitia: {pesanPanitia}
